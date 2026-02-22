@@ -15,7 +15,6 @@
     }
     *{box-sizing:border-box; margin:0; padding:0}
     html,body{height:100%; overflow-x:hidden}
-    /* keep the no-vertical-scroll behavior */
     html{scroll-behavior:auto; overflow-y:hidden; position:relative}
     body{
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
@@ -217,7 +216,6 @@
       align-items:center;
       justify-content:center;
     }
-    /* Make all topic titles white */
     .title{font-size:15px; font-weight:800; margin:0; color:#fff;}
     .title.center{ text-align:center; }
     .footer{
@@ -238,14 +236,18 @@
   </style>
 </head>
 <body>
+
+  <!-- Opening Cinematic Overlay -->
   <div class="netflix-intro" id="clickableIntro" role="button" tabindex="0" aria-label="Enter — click to continue" aria-hidden="false">
     <div class="netflix-logo" aria-label="ANGEL CONTRERAS">
       <h1 class="intro-text">
         <span>A</span><span>N</span><span>G</span><span>E</span><span>L</span><span style="margin-right:0.3em;"> </span><span>C</span><span>O</span><span>N</span><span>T</span><span>R</span><span>E</span><span>R</span><span>A</span><span>S</span>
       </h1>
+      <p style="color:white; font-size:14px; margin-top:6px; text-align:center; font-weight:400;">Tap / Click</p>
     </div>
   </div>
 
+  <!-- Profiles -->
   <div id="profiles" class="profiles" role="dialog" aria-labelledby="whosWatching" aria-modal="true">
     <div class="profiles-wrap">
       <h2 id="whosWatching" class="nf">Who's watching?</h2>
@@ -274,7 +276,7 @@
           <div class="avatar av-guest" aria-hidden="true">
             <span class="icon">
               <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm-3.5 9a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 8.5 11Zm9 2.5a5.5 5.5 0 0 1-11 0 1 1 0 0 1 2 0 3.5 3.5 0 0 0 7 0 1 1 0  0 1 2 0ZM15.5 11A1.5 1.5 0 1 1 17 9.5 1.5 1.5 0 0 1 15.5 11Z"/>
+                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm0 2a4 4 0 1 1-4 4 4 4 0 0 1 4-4Zm0 14a6.002 6.002 0 0 0-5.64-4H17.64A6.002 6.002 0 0 0 12 18Z"/>
               </svg>
             </span>
           </div>
@@ -284,338 +286,73 @@
     </div>
   </div>
 
-  <div class="main" id="appRoot">
-    <nav class="navbar" id="navbar">
-      <button class="brand nf" id="brandHome" aria-label="Reset to intro">Angel Contreras</button>
-      <div class="navlinks" role="navigation" aria-label="Primary">
-        <a href="#home" id="navHome">Home</a>
-        <a href="Charter.html" id="navPortfolio">Portfolio</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <!-- Removed Movies & Shows tab -->
-        <!-- Removed Video Games tab -->
-        <a id="hireLink" href="contact.html">Hire Me</a>
+  <!-- Main Content -->
+  <main class="main">
+    <nav class="navbar">
+      <button class="brand nf">ANGEL CONTRERAS</button>
+      <div class="navlinks">
+        <a href="#">Home</a>
+        <a href="#">Series</a>
+        <a href="#">Movies</a>
+        <a href="#">My List</a>
       </div>
     </nav>
 
-    <header class="hero" id="home">
+    <section class="hero">
       <div class="hero-content">
-        <h1 class="nf" style="white-space:nowrap">ANGEL CONTRERAS - CSULA STUDENT</h1>
-        <p class="sub">Bachelor's in Computer Information Systems</p>
-        <p class="desc">Passionate about building innovative solutions and creating seamless digital experiences. Breaking into tech, one project at a time.</p>
+        <h1>Welcome to the Netflix-style page</h1>
+        <p class="sub">Your custom landing experience</p>
+        <p class="desc">Enjoy a cinematic experience with profiles and content sections just like Netflix.</p>
         <div class="cta">
-          <a class="btn btn-white" href="AngelResume.pdf" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> Resume</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/in/angel-contreras-488539195/" target="_blank" rel="noopener"><span aria-hidden="true">ℹ</span> LinkedIn</a>
+          <a href="#" class="btn btn-white">Get Started</a>
+          <a href="#" class="btn btn-ghost">Learn More</a>
         </div>
-      </div>
-    </header>
-
-    <section class="section" id="portfolio">
-      <h2 class="section-title">Today's Top Picks for Recruiter</h2>
-      <div class="rail">
-        <button class="scroll-btn scroll-left" aria-label="Scroll left">‹</button>
-        <div class="scroller" aria-label="Portfolio carousel">
-          <a href="gaurdcard.html" class="card" style="text-decoration:none; cursor:pointer">
-            <img class="thumb" alt="Guard Card" loading="lazy" src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1000&auto=format&fit=crop">
-            <div class="overlay">
-              <h3 class="title center">Guard Card</h3>
-            </div>
-          </a>
-          <a href="skills.html" class="card" style="text-decoration:none; cursor:pointer">
-            <img class="thumb" alt="Skills" loading="lazy" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&auto=format&fit=crop">
-            <div class="overlay">
-              <h3 class="title center">Skills</h3>
-            </div>
-          </a>
-          <a href="experience.html" class="card" style="text-decoration:none; cursor:pointer">
-            <img class="thumb" alt="Experience" loading="lazy" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1000&auto=format&fit=crop">
-            <div class="overlay">
-              <h3 class="title center">Experience</h3>
-            </div>
-          </a>
-          <a href="certifications.html" class="card" style="text-decoration:none; cursor:pointer">
-            <img class="thumb" alt="Certifications" loading="lazy" src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1000&auto=format&fit=crop">
-            <div class="overlay">
-              <h3 class="title center">Certifications</h3>
-            </div>
-          </a>
-        </div>
-        <button class="scroll-btn scroll-right" aria-label="Scroll right">›</button>
       </div>
     </section>
 
-    <section class="section" id="skills">
-      <h2 class="section-title">Continue Watching for Recruiter</h2>
+    <!-- Example Section -->
+    <section class="section">
+      <h3 class="section-title">Recommended for you</h3>
       <div class="rail">
-        <button class="scroll-btn scroll-left" aria-label="Scroll skills left">‹</button>
-        <div class="scroller" aria-label="Skills carousel">
-          <a href="moviesshows.html" class="card" style="text-decoration:none; cursor:pointer">
-            <img class="thumb" alt="Movies & Shows" loading="lazy" src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1000&auto=format&fit=crop">
-            <div class="overlay">
-              <h3 class="title center">Movies & Shows</h3>
-            </div>
-          </a>
-          <a href="videogames.html" class="card" style="text-decoration:none; cursor:pointer">
-            <img class="thumb" alt="Video Games" loading="lazy" src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1000&auto=format&fit=crop">
-            <div class="overlay">
-              <h3 class="title center">Video Games</h3>
-            </div>
-          </a>
-          <a href="blog.html" class="card" style="text-decoration:none; cursor:pointer">
-            <img class="thumb" alt="Blogs" loading="lazy" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1000&auto=format&fit=crop">
-            <div class="overlay">
-              <h3 class="title center">Blogs</h3>
-            </div>
-          </a>
-          <a id="contactCardLink" href="contact.html" class="card" style="text-decoration:none; cursor:pointer">
-            <img class="thumb" alt="Contact Me" loading="lazy" src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1000&auto=format&fit=crop">
-            <div class="overlay">
-              <h3 class="title center">Contact Me</h3>
-            </div>
-          </a>
+        <div class="scroller">
+          <div class="card"><img class="thumb" src="https://via.placeholder.com/290x168" alt=""><div class="overlay"><h4 class="title">Card 1</h4></div></div>
+          <div class="card"><img class="thumb" src="https://via.placeholder.com/290x168" alt=""><div class="overlay"><h4 class="title">Card 2</h4></div></div>
+          <div class="card"><img class="thumb" src="https://via.placeholder.com/290x168" alt=""><div class="overlay"><h4 class="title">Card 3</h4></div></div>
         </div>
-        <button class="scroll-btn scroll-right" aria-label="Scroll skills right">›</button>
       </div>
     </section>
 
     <footer class="footer">
-      <nav class="links" aria-label="Footer">
-        <a href="mailto:angel@example.com">Email</a>
-        <a href="https://www.linkedin.com/in/angel-contreras-488539195/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
-        <a href="Charter.html">Portfolio</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="experience.html">Experience</a>
-        <a href="certifications.html">Certifications</a>
-        <a href="contact.html">Hire Me</a>
-        <a href="#home" id="footerHome">Back to top</a>
-      </nav>
-      <p class="copyright">© <span id="year"></span> Angel Contreras. All rights reserved.</p>
+      <div class="links">
+        <a href="#">FAQ</a>
+        <a href="#">Help Center</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+      <p class="copyright">© 2026 Angel Contreras</p>
     </footer>
-  </div>
+  </main>
 
   <script>
-    (function() {
-      if (history.scrollRestoration) {
-        history.scrollRestoration = 'manual';
-      }
-      window.scrollTo(0, 0);
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-    })();
-
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 80) navbar.classList.add('scrolled');
-      else navbar.classList.remove('scrolled');
-    }, { passive: true });
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    async function playTaDum(){
-      try {
-        if (sessionStorage.getItem('taDumPlayed')) return;
-        const audio = new Audio('soundn.mp3');
-        audio.volume = 0.6;
-        await audio.play();
-        sessionStorage.setItem('taDumPlayed', '1');
-      } catch (err) {
-        console.log('Audio playback failed:', err);
-      }
-    }
-
-    function setupRail(rail){
-      const scroller = rail.querySelector('.scroller');
-      const left = rail.querySelector('.scroll-left');
-      const right = rail.querySelector('.scroll-right');
-      if (!scroller || !left || !right) return;
-      
-      const step = () => {
-        const cardWidth = 290;
-        the_gap = 10;
-        return cardWidth + the_gap;
-      };
-      
-      left.addEventListener('click', () => {
-        scroller.scrollBy({left: -step(), behavior: 'smooth'});
-      });
-      
-      right.addEventListener('click', () => {
-        scroller.scrollBy({left: step(), behavior: 'smooth'});
-      });
-      
-      scroller.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight') { 
-          e.preventDefault(); 
-          scroller.scrollBy({left: step(), behavior: 'smooth'}); 
-        }
-        if (e.key === 'ArrowLeft') { 
-          e.preventDefault(); 
-          scroller.scrollBy({left: -step(), behavior: 'smooth'}); 
-        }
-      });
-      
-      const updateBtns = () => {
-        const max = scroller.scrollWidth - scroller.clientWidth - 1;
-        left.style.display = scroller.scrollLeft <= 2 ? 'none' : 'grid';
-        right.style.display = scroller.scrollLeft >= max ? 'none' : 'grid';
-      };
-      
-      scroller.addEventListener('scroll', updateBtns, { passive: true });
-      new ResizeObserver(updateBtns).observe(scroller);
-      updateBtns();
-      }
-    
-    document.querySelectorAll('.rail').forEach(setupRail);
-
-    const introSel = '.netflix-intro';
+    const intro = document.getElementById('clickableIntro');
     const profiles = document.getElementById('profiles');
-    const appRoot = document.getElementById('appRoot');
+    const main = document.querySelector('.main');
 
-    function showProfiles(){
-      profiles.classList.add('show');
-    }
-    
-    function hideProfiles(){ 
-      profiles.classList.remove('show'); 
-    }
-    
-    function showMain(){ 
-      appRoot.classList.add('show'); 
-    }
-    
-    function hideMain(){
-      appRoot.classList.remove('show'); 
-    }
-
-    function replayIntro(){
-      const intro = document.querySelector(introSel);
-      const parent = intro.parentNode;
-      const clone = intro.cloneNode(true);
-      parent.replaceChild(clone, intro);
-      makeIntroClickable();
-    }
-
-    function resetToIntro(){
-      hideProfiles();
-      hideMain();
-      window.scrollTo({ top: 0, behavior: 'auto' });
-      replayIntro();
-    }
-
-    function handleProfileClick(e){
-      if (this.classList.contains('disabled') || this.getAttribute('aria-disabled') === 'true'){
-        e && e.preventDefault();
-        return;
-      }
-      const target = this.getAttribute('data-target') || '#home';
-      hideProfiles(); 
-      showMain();
+    intro.addEventListener('click', () => {
+      intro.style.animation = 'hideIntro .4s ease forwards';
       setTimeout(() => {
-        const el = document.querySelector(target);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
-    }
-
-    document.querySelectorAll('.tile').forEach(btn => {
-      btn.addEventListener('click', handleProfileClick);
-      btn.addEventListener('keydown', (e) => {
-        if (btn.classList.contains('disabled')) return;
-        if (e.key === 'Enter' || e.key === ' ') { 
-          e.preventDefault(); 
-          handleProfileClick.call(btn, e); 
-        }
-      });
-    });
-
-    document.getElementById('brandHome').addEventListener('click', resetToIntro);
-
-    const navHome = document.getElementById('navHome');
-    const footerHome = document.getElementById('footerHome');
-    
-    function openProfilesFromNav(e){
-      e.preventDefault();
-      hideMain();
-      showProfiles();
-      window.scrollTo({ top: 0, behavior: 'auto' });
-    }
-    
-    navHome.
-      addEventListener('click', openProfilesFromNav);
-    footerHome.addEventListener('click', openProfilesFromNav);
-
-    function makeIntroClickable(){
-      const intro = document.getElementById('clickableIntro');
-      if (!intro) return;
-      const skip = () => {
         intro.style.display = 'none';
-        showProfiles();
-        playTaDum();
-      };
-      intro.addEventListener('click', skip, { once: true });
-      intro.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); skip(); }
-      }, { once: true });
-    }
-
-    function maybeSkipIntroForHash(){
-      const wanted = ['#skills', '#projects', '#portfolio'];
-      if (wanted.includes(location.hash)) {
-        const intro = document.querySelector(introSel);
-        if (intro) intro.style.display = 'none';
-        hideProfiles();
-        showMain();
-      }
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-      window.scrollTo(0, 0);
-      
-      if ('scrollRestoration' in history) {
-        history.scrollRestoration = 'manual';
-      }
-      
-      makeIntroClickable();
-      maybeSkipIntroForHash();
+        profiles.classList.add('show');
+      }, 400);
     });
 
-    window.addEventListener('pageshow', () => {
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-      window.scrollTo(0, 0);
-    });
-
-    window.addEventListener('beforeunload', () => {
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-    });
-
-    window.addEventListener('DOMContentLoaded', () => {
-      let n = 0;
-      const guard = setInterval(() => {
-        window.scrollTo(0, 0);
-        if (++n > 8) clearInterval(guard);
-      }, 50);
-      
-      if (location.hash) {
-        requestAnimationFrame(() => window.scrollTo(0, 0));
-      }
-    });
-
-    window.addEventListener('DOMContentLoaded', () => {
-      const hire = document.getElementById('hireLink');
-      const contactCard = document.getElementById('contactCardLink');
-      if (hire && contactCard) {
-        contactCard.setAttribute('href', hire.getAttribute('href') || '#');
-        const tgt = hire.getAttribute('target'); 
-        if (tgt) contactCard.setAttribute('target', tgt);
-        const rel = hire.getAttribute('rel'); 
-        if (rel) contactCard.setAttribute('rel', rel);
-      }
+    document.querySelectorAll('.tile').forEach(tile => {
+      tile.addEventListener('click', () => {
+        profiles.classList.remove('show');
+        main.classList.add('show');
+      });
     });
   </script>
+
 </body>
 </html>
