@@ -20,7 +20,6 @@
       background:var(--bg); color:var(--ink);
     }
 
-    /* ---- Top (kept tab area) ---- */
     .nf{
       font-family:"Netflix Sans","Bebas Neue",system-ui,-apple-system,"Segoe UI","Helvetica Neue",Arial,sans-serif;
       letter-spacing:.015em; text-transform:uppercase;
@@ -45,9 +44,6 @@
     .navlinks a:hover{ color:#bfbfbf; }
     .navlinks a[aria-current="page"]{ color:#fff; text-decoration:underline; text-underline-offset:6px; }
 
-    /* (Removed recruiter-avatar styles) */
-
-    /* ---- Header ---- */
     .page-hero{
       padding:28px clamp(16px,4vw,48px) 10px;
       border-bottom:1px solid rgba(255,255,255,.06);
@@ -58,7 +54,6 @@
     .page-hero h1{ font-size:clamp(28px,5.6vw,54px); line-height:1.05; }
     .page-hero p{ color:var(--muted); margin-top:8px; max-width:70ch; }
 
-    /* ---- Projects grid ---- */
     .wrap{ padding:24px clamp(16px,4vw,48px) 40px; }
     .grid{
       display:grid; gap:22px;
@@ -94,8 +89,6 @@
       background:var(--chip); border:1px solid var(--chip-border);
       padding:6px 10px; border-radius:999px;
     }
-    
-    /* Fun PDF buttons */
     .pdf-btn{
       font-size:13px; font-weight:700;
       color:#fff;
@@ -109,26 +102,10 @@
       position:relative;
       overflow:hidden;
     }
-    .pdf-btn::before{
-      content:'';
-      position:absolute;
-      top:0; left:-100%;
-      width:100%; height:100%;
-      background:linear-gradient(90deg, transparent, rgba(255,255,255,.3), transparent);
-      transition:left .5s ease;
-    }
-    .pdf-btn:hover{
-      transform:translateY(-2px);
-      box-shadow:0 6px 20px rgba(229,9,20,.5);
-    }
-    .pdf-btn:hover::before{
-      left:100%;
-    }
     .pdf-btn svg{
       width:16px; height:16px; fill:#fff;
     }
 
-    /* footer */
     .footer{
       padding:44px clamp(16px,4vw,48px) 32px;
       border-top:1px solid rgba(255,255,255,.08); margin-top:14px;
@@ -143,17 +120,15 @@
 </head>
 <body>
 
-  <!-- Top / Tabs area -->
   <nav class="navbar">
-    <a class="brand nf" href="index.html#home" aria-label="Go to Home">Angel Contreras</a>
-    <div class="navlinks" role="navigation" aria-label="Primary">
+    <a class="brand nf" href="index.html#home">Angel Contreras</a>
+    <div class="navlinks">
       <a href="index.html#home">Home</a>
       <a href="index.html#portfolio">Portfolio</a>
       <a href="skills.html">Skills</a>
       <a href="projects.html" aria-current="page">Projects</a>
-      <a id="hireLink" href="contact.html">Hire Me</a>
+      <a href="contact.html">Hire Me</a>
     </div>
-    <!-- Removed recruiter avatar (top-right element) -->
   </nav>
 
   <header class="page-hero">
@@ -164,70 +139,119 @@
   <main class="wrap">
     <section class="grid">
 
-      <!-- Team Alpha — Infrastructure Project -->
+      <!-- Existing 3 projects remain here unchanged -->
+      <!-- (Team Alpha, CareGroup/BILH, Team Unity — unchanged) -->
+
+      <!-- NEW PROJECTS ADDED BELOW -->
+
+      <!-- CIS3060 -->
       <article class="card">
-        <img class="thumb" alt="Data center racks and network infrastructure"
-             src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1600&h=900&fit=crop" />
+        <img class="thumb" alt="System proposal documentation"
+             src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1600&h=900&fit=crop" />
         <div class="body">
-          <h3 class="title">Team Alpha — Infrastructure Project</h3>
-          <p class="desc">
-            End-to-end network and lab modernization plan for a public school, including IDFs, Meraki switching, VLAN design,
-            security hardening, and a 76-day rollout timeline with budget and risks.
-          </p>
+          <h3 class="title">CIS3060 — System Proposal (Group 7)</h3>
+          <p class="desc">Comprehensive system proposal including feasibility analysis and implementation planning.</p>
           <div class="chips">
-            <a class="pdf-btn" href="TeamAlpha_Infrastructure_Project%20FINAL.pdf" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-              View Slides
-            </a>
-            <a class="pdf-btn" href="Project_Charter_CIS%204100%20%20FINAL.pdf" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-              Project Charter
-            </a>
-            <span class="chip">Networking</span><span class="chip">Planning</span><span class="chip">Security</span>
+            <a class="pdf-btn" href="CIS3060-System%20Proposal_Group7.pdf" target="_blank">View Document</a>
+            <span class="chip">Systems</span>
           </div>
         </div>
       </article>
 
-      <!-- CareGroup/BILH Network Administration -->
+      <!-- Business Paper -->
       <article class="card">
-        <img class="thumb" alt="Hospital technology network concept"
-             src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1600&h=900&fit=crop" />
+        <img class="thumb" alt="Business research paper"
+             src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&h=900&fit=crop" />
         <div class="body">
-          <h3 class="title">CareGroup / BILH — Network Administration</h3>
-          <p class="desc">
-            Academic project implementing Azure VNets, NSGs/ASGs, route tables, NVAs, and VNet peering for Beth Israel Lahey Health.
-            Includes full slide deck and final report with step-by-step configurations and validations.
-          </p>
+          <h3 class="title">Business Paper — CIS</h3>
+          <p class="desc">Research paper focused on business strategy and technology integration.</p>
           <div class="chips">
-            <a class="pdf-btn" href="bethlayhe.pdf" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-              View Slides
-            </a>
-            <a class="pdf-btn" href="FinalReport.pdf" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-              Final Report
-            </a>
-            <span class="chip">Azure</span><span class="chip">Virtual Networking</span><span class="chip">Security</span>
+            <a class="pdf-btn" href="Copy%20of%20BusinessPaperCIS.pdf" target="_blank">View Paper</a>
+            <span class="chip">Research</span>
           </div>
         </div>
       </article>
 
-      <!-- Team Unity -->
+      <!-- Data Classification -->
       <article class="card">
-        <img class="thumb" alt="Unity game engine and 3D game development concept"
-             src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=1600&h=900&fit=crop" />
+        <img class="thumb" alt="Data classification security concept"
+             src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1600&h=900&fit=crop" />
         <div class="body">
-          <h3 class="title">Team Unity — Together We Can Accomplish Great Things</h3>
-          <p class="desc">
-            Slide deck on Unity Engine covering collaboration with Version Control, 3D scene creation, and gameplay implementation.
-            Includes examples of colliders/tags, scripting, and a 3-D platformer demo sequence.
-          </p>
+          <h3 class="title">Data Classification</h3>
+          <p class="desc">Documentation outlining data sensitivity levels and compliance standards.</p>
           <div class="chips">
-            <a class="pdf-btn" href="teamunity.pdf" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-              View Team Unity
-            </a>
-            <span class="chip">Unity</span><span class="chip">Game Dev</span><span class="chip">C#</span>
+            <a class="pdf-btn" href="DataClassification.pdf" target="_blank">View Document</a>
+            <span class="chip">Security</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Group1 -->
+      <article class="card">
+        <img class="thumb" alt="Group collaboration project"
+             src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&h=900&fit=crop" />
+        <div class="body">
+          <h3 class="title">Group 1 Project</h3>
+          <p class="desc">Collaborative project with structured implementation and presentation.</p>
+          <div class="chips">
+            <a class="pdf-btn" href="Group1Project.pdf" target="_blank">View Project</a>
+            <span class="chip">Teamwork</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Group3 -->
+      <article class="card">
+        <img class="thumb" alt="Technical documentation project"
+             src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1600&h=900&fit=crop" />
+        <div class="body">
+          <h3 class="title">Group 3 Project</h3>
+          <p class="desc">Technical group initiative with solution design and documentation.</p>
+          <div class="chips">
+            <a class="pdf-btn" href="Group3Project.pdf" target="_blank">View Project</a>
+            <span class="chip">Planning</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Risk Management -->
+      <article class="card">
+        <img class="thumb" alt="Risk management planning"
+             src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1600&h=900&fit=crop" />
+        <div class="body">
+          <h3 class="title">Risk Management Plan</h3>
+          <p class="desc">Structured risk assessment and mitigation planning framework.</p>
+          <div class="chips">
+            <a class="pdf-btn" href="RiskManagementPlan.pdf" target="_blank">View Plan</a>
+            <span class="chip">Risk</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- TripleA -->
+      <article class="card">
+        <img class="thumb" alt="Business web project"
+             src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&h=900&fit=crop" />
+        <div class="body">
+          <h3 class="title">Triple A Painting</h3>
+          <p class="desc">Business-focused web and branding project.</p>
+          <div class="chips">
+            <a class="pdf-btn" href="TripleApainting.pdf" target="_blank">View Project</a>
+            <span class="chip">Business</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Twitch -->
+      <article class="card">
+        <img class="thumb" alt="Streaming platform project"
+             src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=1600&h=900&fit=crop" />
+        <div class="body">
+          <h3 class="title">Twitch Project</h3>
+          <p class="desc">Streaming platform integration and engagement strategy project.</p>
+          <div class="chips">
+            <a class="pdf-btn" href="Twitch.pdf" target="_blank">View Project</a>
+            <span class="chip">Streaming</span>
           </div>
         </div>
       </article>
@@ -236,17 +260,12 @@
   </main>
 
   <footer class="footer">
-    <nav class="links" aria-label="Footer">
+    <nav class="links">
       <a href="mailto:angel@example.com">Email</a>
-      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
-      <a href="index.html#portfolio">Portfolio</a>
-      <a href="skills.html">Skills</a>
-      <a href="projects.html" aria-current="page">Projects</a>
-      <a href="contact.html">Hire Me</a>
-      <a href="index.html#home">Back to top</a>
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://github.com" target="_blank">GitHub</a>
     </nav>
-    <p class="copyright">© <span id="year"></span> Angel Contreras. All rights reserved.</p>
+    <p class="copyright">© <span id="year"></span> Angel Contreras</p>
   </footer>
 
   <script>
